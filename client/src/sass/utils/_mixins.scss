@@ -1,0 +1,22 @@
+@mixin link_anim{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $color-primary;
+        transition: width .1s ease-in-out;
+    }
+    &:hover::before{
+        width: 100%;
+    }
+}
+
+@mixin flex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

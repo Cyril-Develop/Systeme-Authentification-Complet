@@ -1,0 +1,15 @@
+.navbar{
+    @include flex($justify: flex-end, $align: center);
+    height: 80px;
+    padding: 0 40px;
+    &_link{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $color-secondary;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}

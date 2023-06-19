@@ -1,0 +1,11 @@
+.btn{
+    padding: 5px 10px;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    border: none;
+    color: #fff;
+    background-color: $color-primary;
+    cursor: pointer;
+    &:hover{
+        background-color: #35324de1;
+    }
+}

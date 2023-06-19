@@ -1,0 +1,98 @@
+.main{
+    @include flex($justify: center, $align: center);
+    min-height: 100vh;
+    &_form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+        max-width: 600px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        background-color: $color-secondary;
+        h1{
+            text-align: center;
+            font-size: clamp(1.6rem, 2vw, 4rem);
+            color: $color-primary;
+        }
+        h2{
+            text-align: center;
+            font-weight: 100;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            color: $color-primary;
+            a{
+                @include link_anim;
+            }
+        }
+        &_group{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            label{
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: $color-primary;
+                transition: all .1s ease-in-out;
+            }
+            input{
+                background-color: transparent;
+                height: 40px;
+                padding-left: 10px;
+                border: none;
+                outline: none;
+                color: $color-primary;
+                border-bottom: 1px solid #a7adc3;
+                &:focus{
+                    border-bottom: 1px solid #35324d;
+                }
+            }
+            &_icon{
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                background-color: transparent;
+                border: none;
+                color: $color-primary;
+                cursor: pointer;
+            }
+        }
+    }
+    .animLabel{
+        top: 0;
+        left: 0;
+    }
+    .inputError{
+        text-align: center;
+        color: crimson;
+        font-size: 1.4rem;
+    }
+    .registration{
+        position: absolute;
+        top: 100px;
+        width: 400px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
+        background-color: green;
+        color: white;
+        animation : show 0.5s ease-in-out forwards;
+    }
+    @keyframes show{
+        from{
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    };
+}

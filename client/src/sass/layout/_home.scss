@@ -1,0 +1,6 @@
+.main_home{
+    @include flex($justify: center, $align: center);
+    height: calc(100vh - 80px);
+    font-size: clamp(1rem, 8vw, 2rem);
+    background-color: $color-secondary;
+}

@@ -1,0 +1,61 @@
+.notFound{
+    @include flex($justify: space-around, $align: center);
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fcfefc;
+    h1{
+        color: $color-tertiary;
+        font-weight: 900;
+        font-size: clamp(2rem, 12vw, 14rem);
+    }
+    h2{
+        color: $color-tertiary;
+        font-weight: 900;
+        font-size: clamp(2rem, 9vw, 10rem);
+    }
+    &_link{
+        position: relative;
+        z-index: 10;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: $color-tertiary;
+        border: 2px solid $color-tertiary;
+        font-size: clamp(2rem, 3vw, 3rem);
+        overflow: hidden;
+        &::after{
+            content: '';
+            z-index: -10;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            background-color: $color-tertiary;
+            transition: transform 0.2s ease-in-out;
+        }
+        &:hover{
+            color: #fcfefc;
+            transition-duration: 0.3s;
+        }
+        &:hover::after{
+            transform: translateX(0);
+        }
+    }
+    &_footer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 388px;
+        max-height: 400px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        a{
+            font-style: italic;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            @include link_anim;
+        }
+    }
+}
