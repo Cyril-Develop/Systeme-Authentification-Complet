@@ -4,7 +4,7 @@
 
 ![register-failed](./screenshot/register-failed.png)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Cyril-Develop/Authentication-System?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Cyril-Develop/Systeme-Authentification-Complet?style=for-the-badge)
 
 ## Installation :
 
